@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ник пользователя</th>
+                    <th scope="col">URL адрес пользователя</th>
+                    <th scope="col">Биография пользователя</th>
+                    <th scope="col">Количество подписок пользователя</th>
+                    <th scope="col">Количество подписчиков пользователя</th>
+                    <th scope="col">Польное имя пользователя</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for insta_user in insta_users %}
+                <tr>
+
+                        <td scope="row">{{ forloop.counter }}</td>
+                        <td>{{ insta_user.username }}</td>
+                        <td>{{ insta_user.url }}</td>
+                        <td>{{ insta_user.biography }}</td>
+                        <td>{{ insta_user.follow }}</td>
+                        <td>{{ insta_user.followers }}</td>
+                        <td>{{ insta_user.full_name }}</td>
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="container w-75">
+            <h3  class="text-center">Пользователь <a href="{{ insta_user.url }}" target="_blank">{{ insta_user.username }}</a> </h3>
+            <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tbody>
+                        <tr>
+                            <th scope="row">URL адрес пользователя:</th>
+                            <td>{{ insta_user.url }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ник пользователя:</th>
+                            <td>{{ insta_user.username }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Биография пользователя:</th>
+                            <td>{{ insta_user.biography }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Количество подписок пользователя:</th>
+                            <td>{{ insta_user.follow }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Количество подписчиков пользователя:</th>
+                            <td>{{ insta_user.followers}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Польное имя пользователя:</th>
+                            <td>{{ insta_user.full_name }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+    </div>
+
+{% endblock %}
